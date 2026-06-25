@@ -1,5 +1,11 @@
 # AstroPhenomena Explorer — AI Operating System v0.2
 
+**Version:** v0.2
+**Status:** Working operating document
+**Last updated:** 2026-06-25
+
+---
+
 ## 1. Purpose
 
 AstroPhenomena Explorer is not only a software project.
@@ -12,7 +18,24 @@ The goal is not to build a fixed application immediately, but to create a struct
 
 ---
 
-## 2. Core Principle
+## 2. Primary Audience and Accessibility Contract
+
+AstroPhenomena Explorer is primarily designed for the creator’s advanced learning.
+
+However, the platform must remain clear enough to serve as an accessible engineering and scientific portfolio for external reviewers, recruiters, professors and future contributors.
+
+The project should not be simplified into a generic beginner application, but its interface and documentation must allow an external observer to understand what astronomical concept is being explored and why it matters.
+
+The primary audience is therefore:
+
+* the creator as an advanced learner;
+* the creator as an engineer building a long-term scientific portfolio;
+* external reviewers who need to understand the project quickly;
+* future contributors who may join or reuse the platform.
+
+---
+
+## 3. Core Principle
 
 The project follows one central principle:
 
@@ -28,9 +51,13 @@ No major feature should be developed before the following questions have been an
 6. What are the risks of misunderstanding or oversimplification?
 7. How will the feature connect to the rest of the platform?
 
+This principle does not forbid exploratory work.
+
+It means that exploratory work must be clearly identified, scoped and prevented from silently becoming final architecture.
+
 ---
 
-## 3. Role of the Human Project Lead
+## 4. Role of the Human Project Lead
 
 The human project lead is responsible for:
 
@@ -45,9 +72,13 @@ The project lead does not need to know everything in advance.
 
 The system must assume that many scientific, technical and design decisions will emerge progressively.
 
+The project lead remains the final decision-maker.
+
+AI outputs are recommendations, not final decisions.
+
 ---
 
-## 4. Role of ChatGPT
+## 5. Role of ChatGPT
 
 ChatGPT acts as the scientific, pedagogical and strategic lead.
 
@@ -69,7 +100,7 @@ It must also identify what has not yet been asked but may matter for the project
 
 ---
 
-## 5. Role of Claude
+## 6. Role of Claude
 
 Claude acts as the software architecture and code quality lead.
 
@@ -87,7 +118,7 @@ Claude should be involved especially when the project moves from conceptual desi
 
 ---
 
-## 6. Role of Gemini
+## 7. Role of Gemini
 
 Gemini acts as the product, user experience and visual design lead.
 
@@ -105,19 +136,21 @@ Gemini should be involved especially during the design system and interface prot
 
 ---
 
-## 7. Multi-AI Workflow
+## 8. Multi-AI Workflow
 
 The AI system must not operate as three independent assistants.
 
 Each AI should receive the same core documents:
 
+* AI Operating System;
 * Project Philosophy;
 * Master Brief;
 * Architecture Document;
 * Scientific Map;
 * Design System;
 * Roadmap;
-* Prompt Library.
+* Prompt Library;
+* STATE.md.
 
 When an important decision is made, the preferred workflow is:
 
@@ -127,9 +160,15 @@ When an important decision is made, the preferred workflow is:
 4. ChatGPT compares the outputs, identifies contradictions and proposes a synthesis.
 5. The human project lead validates, rejects or redirects the decision.
 
+The full multi-AI workflow should be reserved for major, ambiguous or hard-to-reverse decisions.
+
+For smaller decisions, one specialized AI review may be sufficient.
+
+The goal is not to create unnecessary process, but to use the right level of review for the decision being made.
+
 ---
 
-## 8. Working Rules
+## 9. Working Rules
 
 Before any major development, the team must:
 
@@ -146,9 +185,11 @@ The project must avoid isolated scripts.
 
 Every feature must belong to the same coherent platform.
 
+Exploratory scripts, notebooks and prototypes are allowed, but they must remain clearly separated from stable architecture until reviewed.
+
 ---
 
-## 9. Documentation Rules
+## 10. Documentation Rules
 
 Documentation is not a side activity.
 
@@ -168,9 +209,13 @@ Each document must answer a specific need:
 
 A document should be updated only when it changes a decision, clarifies a concept, or improves project coherence.
 
+A document should not exist only because it was planned.
+
+It should exist because it has a clear role in the project.
+
 ---
 
-## 10. Development Philosophy
+## 11. Development Philosophy
 
 AstroPhenomena Explorer should grow through progressive layers.
 
@@ -201,13 +246,16 @@ Later layers may include:
 
 Each new layer must reuse concepts from previous layers.
 
+The project should grow through dependency chains, not through disconnected ideas.
+
 ---
 
-## 11. Challenge Protocol
+## 12. Challenge Protocol
 
 The AI team must regularly challenge the project by asking:
 
 * Is this feature scientifically meaningful?
+* Is this feature connected to a real DU ECU concept?
 * Is this feature too superficial?
 * Is this trying to imitate an existing tool instead of creating a unique learning platform?
 * Is the current architecture too rigid?
@@ -224,27 +272,38 @@ Criticism is part of the design process.
 
 ---
 
-## 12. Current Phase
+## 13. Current Project State
 
-The project is currently in the conceptual design phase.
+AstroPhenomena Explorer is past its initial conceptual phase.
 
-The priority is not to write production code.
+It is currently in a **conceptual consolidation and prototype audit phase**.
 
-The priority is to build:
+The project is not starting from zero: some experimental code, visualizations and Streamlit modules may already exist.
 
-* the project philosophy;
-* the AI workflow;
-* the scientific map;
-* the architecture;
-* the roadmap;
-* the design direction;
-* the first interface concepts.
+Existing code must not automatically be considered final architecture, but useful prior work must not be ignored either.
 
-Coding should begin only when the first module has a clear scientific purpose, a defined user scenario, and an expandable architecture.
+Current deliverables in progress:
+
+* project philosophy;
+* AI workflow;
+* scientific map;
+* architecture;
+* roadmap;
+* design direction.
+
+Current objectives:
+
+* clarify the long-term vision;
+* define the scientific and pedagogical foundations;
+* audit existing prototypes and decide what is worth keeping;
+* separate experimental work from stable platform components;
+* prepare the transition from exploratory prototypes to a coherent architecture.
+
+When to write code is governed by the **Design-to-Code Definition of Done**, not by a blanket prohibition.
 
 ---
 
-## 13. First Scientific Focus
+## 14. First Scientific Focus
 
 The first scientific focus is:
 
@@ -267,7 +326,7 @@ This will become the foundation of the first module:
 
 ---
 
-## 14. Long-Term Ambition
+## 15. Long-Term Ambition
 
 AstroPhenomena Explorer should become a coherent scientific platform capable of helping users move from an observed sky to an understood, predicted and scientifically exploitable sky.
 
@@ -281,25 +340,6 @@ Its long-term ambition is to become:
 * an open-source portfolio project.
 
 The platform must remain ambitious, but each step must be understandable, testable and connected to a real scientific concept.
-
-## 15. Current Project State
-
-AstroPhenomena Explorer is currently in a **conceptual consolidation and prototype audit phase**.
-
-The project is not starting from zero. Some experimental code, visualizations and Streamlit modules may already exist.
-
-However, existing code should not automatically be considered final architecture.
-
-The current objective is to:
-
-* clarify the long-term vision;
-* define the scientific and pedagogical foundations;
-* audit existing prototypes;
-* decide which parts are worth keeping;
-* separate experimental work from stable platform components;
-* prepare the transition from exploratory prototypes to a coherent architecture.
-
-The project should not freeze existing prototypes prematurely, but it should also avoid ignoring useful work that has already been done.
 
 ---
 
@@ -317,6 +357,8 @@ The official project state is defined by:
 AI conversations are not the source of truth.
 
 AI outputs become part of the project only when they are synthesized, validated and written into the official repository.
+
+If an idea exists only in a conversation, it is not yet part of the project.
 
 ---
 
@@ -371,6 +413,22 @@ The goal is not to document everything.
 
 The goal is to prevent the same strategic debates from restarting indefinitely.
 
+Decision entries are append-only.
+
+An accepted decision is never edited. If it changes later, a new entry must be added to supersede it.
+
+This preserves the memory of what was tried, accepted, rejected or replaced.
+
+When the AIs disagree and the human project lead is unsure, the default tie-breaker is:
+
+1. prefer the option that is smaller in scope;
+2. prefer the option that is cheaper to reverse;
+3. if still tied, defer to the AI that owns the relevant domain:
+
+   * science and pedagogy → ChatGPT;
+   * software architecture → Claude;
+   * UX, design and product → Gemini.
+
 ---
 
 ## 19. Work Tiering: Sketch, Experimental, Stable
@@ -403,6 +461,16 @@ Purpose: become a reliable foundation for future modules.
 
 No experimental component should be treated as stable until it has been reviewed.
 
+Every piece of code lives in exactly one tier, identified by its location:
+
+* Sketch → `notebooks/`, `prototypes/`
+* Experimental → inside the package, explicitly marked as experimental
+* Stable → `src/astrophenomena/`
+
+A file’s tier is therefore a fact, not a judgment.
+
+Promotion means moving the file up a tier and applying that tier’s rules.
+
 ---
 
 ## 20. Spike Allowance
@@ -434,7 +502,7 @@ A feature is ready to move from concept to implementation only when the followin
 3. The user question is explicit.
 4. The required input and output data are known.
 5. The expected level of precision is defined.
-6. The UX intention is described.
+6. The UX intention is described and aligned with the Progressive Disclosure rule: the visual phenomenon must be defined before raw data is displayed.
 7. The feature belongs to an existing module or a justified new module.
 8. The implementation tier is chosen: sketch, experimental or stable.
 9. The main risks are identified.
@@ -444,7 +512,7 @@ This rule prevents both premature coding and endless design.
 
 ---
 
-## 22. UX & Visual Philosophy
+## 22. UX & Visual Guardrails
 
 The platform’s design must match its scientific rigor.
 
@@ -454,7 +522,9 @@ It is a pedagogical instrument.
 
 AstroPhenomena Explorer should not simply display astronomical data. It should help users understand why the data has meaning.
 
-Three rules guide the UX:
+The detailed visual identity will be defined later in the Design System.
+
+However, three high-level UX rules already guide the project:
 
 ### 1. Zero Magic Pixel Rule
 
@@ -496,7 +566,7 @@ Changing a variable should produce an immediate visual or numerical consequence.
 
 Before validating an interface, visualization or dashboard, the team must ask:
 
-* Does this interface help the user understand an astronomical concept?
+* Does this interface help the user understand a specific DU ECU astronomical concept?
 * Is the visual hierarchy clear?
 * Are too many numbers displayed at the same time?
 * Can a new user understand the purpose of the screen in less than 30 seconds?
@@ -509,3 +579,18 @@ A beautiful interface is not enough.
 
 The interface must make the sky more understandable.
 
+---
+
+## 24. AI Operating System v0.3 Backlog
+
+The following items are not required before moving to the Project Philosophy document, but should be considered for a future AI Operating System update:
+
+* add a Definition of Done for project documents;
+* add document versioning and last-review date rules for all major documents;
+* clarify when to use the full 3-AI workflow versus a single AI review;
+* consolidate the number of long-term documents if needed;
+* define a scientific priority rule based on DU ECU dependency chains;
+* move the detailed UX and visual philosophy into the future Design System document while keeping only high-level UX guardrails here;
+* initialize `STATE.md`;
+* initialize `decisions/decision_log.md`;
+* retro-log existing major prototype decisions.

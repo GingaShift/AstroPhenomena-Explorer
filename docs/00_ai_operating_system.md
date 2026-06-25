@@ -1,4 +1,4 @@
-# AstroPhenomena Explorer — AI Operating System v0.1
+# AstroPhenomena Explorer — AI Operating System v0.2
 
 ## 1. Purpose
 

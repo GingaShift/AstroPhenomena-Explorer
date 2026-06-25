@@ -281,3 +281,231 @@ Its long-term ambition is to become:
 * an open-source portfolio project.
 
 The platform must remain ambitious, but each step must be understandable, testable and connected to a real scientific concept.
+
+## 15. Current Project State
+
+AstroPhenomena Explorer is currently in a **conceptual consolidation and prototype audit phase**.
+
+The project is not starting from zero. Some experimental code, visualizations and Streamlit modules may already exist.
+
+However, existing code should not automatically be considered final architecture.
+
+The current objective is to:
+
+* clarify the long-term vision;
+* define the scientific and pedagogical foundations;
+* audit existing prototypes;
+* decide which parts are worth keeping;
+* separate experimental work from stable platform components;
+* prepare the transition from exploratory prototypes to a coherent architecture.
+
+The project should not freeze existing prototypes prematurely, but it should also avoid ignoring useful work that has already been done.
+
+---
+
+## 16. Source of Truth
+
+The GitHub repository is the official project source of truth.
+
+The official project state is defined by:
+
+* `STATE.md`;
+* the documents inside `docs/`;
+* the decision records inside `decisions/`;
+* the current roadmap.
+
+AI conversations are not the source of truth.
+
+AI outputs become part of the project only when they are synthesized, validated and written into the official repository.
+
+---
+
+## 17. STATE.md Rule
+
+A `STATE.md` file must summarize the current state of the project.
+
+It should contain:
+
+* current project phase;
+* active module or topic;
+* last 3 to 5 validated decisions;
+* current open questions;
+* what is stable;
+* what is experimental;
+* next intended step.
+
+At the beginning of an important AI session, the relevant AI should read `STATE.md`.
+
+At the end of an important AI session, if a meaningful decision has been made, `STATE.md` should be updated.
+
+This prevents different AI tools from working with outdated or contradictory assumptions.
+
+---
+
+## 18. Decision Log Protocol
+
+Important decisions must be recorded in `decisions/decision_log.md`.
+
+A decision should be logged when it changes:
+
+* the scientific scope;
+* the software architecture;
+* the module structure;
+* the UX direction;
+* the data sources;
+* the validation method;
+* the roadmap.
+
+Each decision entry should include:
+
+* date;
+* decision title;
+* context;
+* options considered;
+* chosen option;
+* reason;
+* consequences;
+* status.
+
+The goal is not to document everything.
+
+The goal is to prevent the same strategic debates from restarting indefinitely.
+
+---
+
+## 19. Work Tiering: Sketch, Experimental, Stable
+
+AstroPhenomena Explorer allows exploratory work, but it must be clearly classified.
+
+### Sketch
+
+A sketch is a quick idea, diagram, notebook, mockup or small test.
+
+It is allowed to be rough, incomplete and disposable.
+
+Purpose: explore a question quickly.
+
+### Experimental
+
+An experimental component is a prototype that works but is not yet part of the stable platform.
+
+It can be used for learning, visual exploration or technical validation.
+
+Purpose: test whether an idea is worth integrating.
+
+### Stable
+
+A stable component is part of the official project architecture.
+
+It must be documented, connected to the project philosophy, scientifically justified and maintainable.
+
+Purpose: become a reliable foundation for future modules.
+
+No experimental component should be treated as stable until it has been reviewed.
+
+---
+
+## 20. Spike Allowance
+
+The project follows the principle “design before building”, but this does not forbid exploratory code.
+
+Short exploratory coding sessions, called spikes, are allowed when they answer a concrete design or scientific question.
+
+A spike is acceptable if it is used to answer questions such as:
+
+* Is this visualization understandable?
+* Can this astronomical calculation be implemented with the chosen tools?
+* What data format is needed?
+* Is this interaction useful for learning?
+* Is the concept easier to understand through simulation?
+
+A spike should remain in `prototypes/`, `notebooks/` or another experimental area until reviewed.
+
+A spike must not silently become production architecture.
+
+---
+
+## 21. Design-to-Code Definition of Done
+
+A feature is ready to move from concept to implementation only when the following conditions are met:
+
+1. The scientific concept is clearly defined.
+2. The DU ECU course connection is identified.
+3. The user question is explicit.
+4. The required input and output data are known.
+5. The expected level of precision is defined.
+6. The UX intention is described.
+7. The feature belongs to an existing module or a justified new module.
+8. The implementation tier is chosen: sketch, experimental or stable.
+9. The main risks are identified.
+10. The decision is logged if it changes the project direction.
+
+This rule prevents both premature coding and endless design.
+
+---
+
+## 22. UX & Visual Philosophy
+
+The platform’s design must match its scientific rigor.
+
+The interface is not a decorative skin.
+
+It is a pedagogical instrument.
+
+AstroPhenomena Explorer should not simply display astronomical data. It should help users understand why the data has meaning.
+
+Three rules guide the UX:
+
+### 1. Zero Magic Pixel Rule
+
+Every visual element must correspond to a physical reality, a mathematical boundary, a scientific state or a pedagogical purpose.
+
+If a line, color, dot, glow, opacity or animation does not help comprehension, it should be removed or redesigned.
+
+### 2. Progressive Disclosure of Complexity
+
+The interface must not overwhelm users with raw numbers immediately.
+
+It should reveal complexity progressively:
+
+1. show the visible phenomenon;
+2. show the main observable quantity;
+3. explain the underlying coordinate or physical concept;
+4. reveal mathematical details only when useful.
+
+For example, the user should first see an object moving in the local sky, then understand altitude and azimuth, and only later inspect the coordinate transformation.
+
+### 3. Sandbox Interaction Model
+
+Learning happens through manipulation.
+
+Whenever possible, astronomical concepts should be made explorable through interaction:
+
+* time sliders;
+* location changes;
+* draggable sky views;
+* toggled coordinate systems;
+* synchronized visualizations;
+* before/after comparisons.
+
+Changing a variable should produce an immediate visual or numerical consequence.
+
+---
+
+## 23. UX Challenge Protocol
+
+Before validating an interface, visualization or dashboard, the team must ask:
+
+* Does this interface help the user understand an astronomical concept?
+* Is the visual hierarchy clear?
+* Are too many numbers displayed at the same time?
+* Can a new user understand the purpose of the screen in less than 30 seconds?
+* Does the interface avoid looking like a generic science-fiction cockpit?
+* Is every visual element scientifically or pedagogically justified?
+* Is the user guided from observation to explanation?
+* Does the interface support both beginner understanding and deeper expert exploration?
+
+A beautiful interface is not enough.
+
+The interface must make the sky more understandable.
+

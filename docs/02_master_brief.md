@@ -894,3 +894,188 @@ Each prototype should test one idea without pretending to be the final platform.
 The project should not be rushed into a full application too early.
 
 It should grow like a scientific instrument: carefully, visibly, progressively and with purpose.
+
+
+# Master Brief v0.2 — Targeted Corrections
+
+## 1. Replace Section 10.1 — Work tiers
+
+Replace the current `10.1 Work tiers` section with:
+
+```md
+### 10.1 Work tiers
+
+All work should be classified according to its maturity and location.
+
+| Tier | Location | Meaning |
+|---|---|---|
+| Sketch | `notebooks/` | Quick scientific or technical exploration, fully disposable |
+| Prototype | `prototypes/` | Structured sketch testing an idea, UI, calculation or workflow |
+| Experimental | marked experimental in the package/module | More structured implementation, usable for testing but not stable |
+| Stable | `src/astrophenomena/` | Official implementation code |
+
+Sketch and Prototype are both pre-review tiers.
+
+Neither Sketch nor Prototype work should be imported directly by stable code.
+
+The AI Operating System groups quick explorations and prototypes under the broader “Sketch” logic.  
+This Master Brief distinguishes them by location only:
+
+- `notebooks/` for quick scientific or technical sketches;
+- `prototypes/` for structured prototype experiments.
+
+This avoids confusion while preserving the validated AI Operating System rules.
+```
+
+---
+
+## 2. Add Section 10.5 — Feature Brief Minimum Required Content
+
+Insert after `10.4 First serious coding target`:
+
+```md
+### 10.5 Feature Brief — minimum required content
+
+A Feature Brief is the instruction document passed to a coding agent before implementation.
+
+No coding agent should start a serious implementation without a Feature Brief.
+
+A Feature Brief must contain at minimum:
+
+| Field | Content |
+|---|---|
+| Feature name | Short unique name |
+| Scientific concept | Which DU ECU or astronomy concept this implements |
+| User question | What question the user can answer after this is built |
+| Input / Output | Explicit data-in → data-out contract |
+| Target tier | Sketch / Prototype / Experimental / Stable |
+| Target location | Exact folder in the repository |
+| Constraints | What must not be changed, touched or assumed |
+| Expected output | What the reviewer will check |
+| Out of scope | Explicit list of what this feature must not do |
+| Linked decision | Decision log entry reference, if applicable |
+
+The Feature Brief protects the project from uncontrolled implementation.
+
+Antigravity or any coding agent should implement the brief, not invent the scope.
+```
+
+---
+
+## 3. Add the Five-Axis Mapping in Section 7
+
+Insert after `7.2 Scientific progression`:
+
+```md
+### 7.3 Mapping to the five project axes
+
+The scientific progression maps to the five structural axes of AstroPhenomena Explorer:
+
+| Axis | Name | Scientific / product role |
+|---|---|---|
+| Axe 1 | Comprendre le ciel | Sky coordinates, local sky position, time, altitude, azimuth |
+| Axe 2 | Observer le ciel | Visibility, culmination, rise/set, observation planning |
+| Axe 3 | Prédire les phénomènes | Conjunctions, oppositions, elongations, transits, event detection |
+| Axe 4 | Simuler les phénomènes | Eclipses, occultations, shadows, geometry, interactive simulation |
+| Axe 5 | Produire de la science | Meteors, catalogues, Gaia data, real datasets, analysis workflows |
+
+Future hardware observation is a later extension beyond the five core axes.
+
+The five axes remain the main conceptual structure of the project.  
+The Roadmap will define the exact development order.
+```
+
+Then renumber the existing `7.3 Scientific traceability` as:
+
+```md
+### 7.4 Scientific traceability
+```
+
+---
+
+## 4. Add STATE.md First Rule
+
+Insert in Section 8, after `8.1 Source of truth`:
+
+```md
+### 8.2 Start from STATE.md
+
+Before starting any important AI session, review or implementation task, the assistant should read `STATE.md`.
+
+`STATE.md` defines:
+
+- the current phase of the project;
+- the last validated decisions;
+- what is stable;
+- what is experimental;
+- what is currently being discussed;
+- the next intended step.
+
+This prevents AI tools from working from outdated assumptions.
+
+If `STATE.md` conflicts with an older conversation, `STATE.md` takes priority.
+```
+
+Then renumber the following subsections in Section 8.
+
+Also add this point to Section 15 — `What Every AI Must Remember`:
+
+```md
+Before any important task, read `STATE.md` to understand the current project state.
+```
+
+---
+
+## 5. Add Section 11.5 — Topocentric Visual Constraint
+
+Insert after Section `11.4 AI review requirement for visuals`:
+
+```md
+### 11.5 The Topocentric Visual Constraint
+
+To prevent AstroPhenomena Explorer from mimicking generic space simulators, primary visual representations should be anchored in the user’s local sky whenever relevant.
+
+By default, interface visuals should begin from the point of view of an observer on Earth.
+
+This means prioritizing:
+
+- local horizon;
+- altitude and azimuth;
+- visible sky region;
+- observer location;
+- current time;
+- object visibility;
+- what can actually be seen from the ground.
+
+Heliocentric, geocentric, orbital or abstract views are allowed when they clarify a scientific concept.
+
+However, the first visual anchor should usually answer:
+
+> **What does this mean for my sky, here and now?**
+
+This supports the core promise:
+
+> **“This is my sky, now.”**
+```
+
+---
+
+## 6. Rename optional image if inserted
+
+If the image `05_user_exploration_flow_optional.png` is included in the Master Brief, rename it to:
+
+```txt
+05_user_exploration_flow.png
+```
+
+Then update the Markdown path:
+
+```md
+![User Exploration Flow](../assets/master_brief/05_user_exploration_flow.png)
+```
+
+If the image is not included, keep it outside the Master Brief and move it later to the Design System or UX document.
+
+```
+```
+

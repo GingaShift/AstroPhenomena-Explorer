@@ -1,9 +1,9 @@
-# AstroPhenomena Explorer - Project Philosophy v0.1
+# AstroPhenomena Explorer — Project Philosophy v0.2
 
-**Version:** v0.1
-**Status:** First philosophy draft
+**Version:** v0.2
+**Status:** Consolidated philosophy draft after Claude/Gemini review
 **Language:** English-first, bilingual-ready later
-**Document role:** Define the identity, vision, principles and boundaries of AstroPhenomena Explorer.
+**Document role:** Define the identity, vision, principles, boundaries and central promise of AstroPhenomena Explorer.
 
 ---
 
@@ -19,7 +19,7 @@ It is a long-term learning, engineering and research journey built around one ce
 
 AstroPhenomena Explorer begins with astronomy, but it is not limited to a static sky map or a collection of formulas.
 
-It aims to become a platform where celestial objects, astronomical phenomena, space events, images, data, explanations and visualizations are orchestrated into a coherent experience.
+It aims to become a platform where celestial objects, astronomical phenomena, images, data, explanations and visualizations are orchestrated into a coherent experience.
 
 The user should not feel like they are reading a generic astronomy website.
 
@@ -83,9 +83,43 @@ It should be an interface between a human being and their actual sky.
 
 ---
 
-## 4. Live Sky Dashboard First
+## 4. The Time Experience Principle
 
-The first strong experience of AstroPhenomena Explorer should be a **Live Sky Dashboard**.
+AstroPhenomena Explorer is live by default, but time-explorable by design.
+
+The first mode of the platform should answer:
+
+> **What is happening now, here, in this sky?**
+
+But astronomy is also about cycles, prediction, recurrence and motion.
+
+Therefore, the platform should allow the user to move progressively through time:
+
+```text
+Now → Tonight → Upcoming → Explore another date
+```
+
+The default experience is the present sky.
+
+The deeper experience is temporal exploration.
+
+The user should be able to understand not only what is visible now, but also:
+
+* what will become visible later;
+* when an object will culminate;
+* when a phenomenon will occur;
+* how the sky changes over hours, days, months and seasons;
+* how prediction emerges from geometry and time.
+
+Time should not be presented as a static input field only.
+
+It should feel like a scientific dimension of the experience.
+
+---
+
+## 5. Live Sky Dashboard First
+
+The first strong product experience of AstroPhenomena Explorer should be a **Live Sky Dashboard**.
 
 When a user arrives, they should immediately see:
 
@@ -93,35 +127,72 @@ When a user arrives, they should immediately see:
 * what is visible now;
 * what will become visible tonight;
 * what astronomical event deserves attention;
-* what image, object or phenomenon is worth exploring;
+* what object or phenomenon is worth exploring;
 * what is changing over the next hours or days.
 
 The homepage should not feel like a static landing page.
 
 It should feel like a living astronomical command center made of visual, contextual and explanatory cards.
 
-Possible cards may include:
+The philosophy is fixed:
+
+> **The platform should open with the sky in motion, not with a static explanation.**
+
+### Development order clarification
+
+The Live Sky Dashboard is the intended first experience for users, not necessarily the first thing to build completely.
+
+The underlying calculation engines — coordinates, visibility, observation windows, event detection and contextual ranking — must be built progressively.
+
+The dashboard is assembled as these engines become available.
+
+The Roadmap defines the development sequencing.
+
+---
+
+## 6. Dashboard Contextual Intelligence
+
+The Live Sky Dashboard must avoid the data-dumping trap.
+
+It should not display every possible card at once.
+
+Instead, the dashboard should be driven by contextual intelligence: a deterministic system that prioritizes information according to the user’s location, time, sky conditions, visibility and astronomical relevance.
+
+The dashboard should prioritize:
+
+1. **Critical or rare events**
+   Eclipses, meteor shower peaks, transits, occultations or major configurations should receive visual priority when relevant.
+
+2. **Tonight’s observing windows**
+   Visible planets, the Moon, bright stars or selected deep-sky objects currently above the horizon should appear before hidden or irrelevant targets.
+
+3. **Contextual learning opportunities**
+   Educational cards should appear when they are connected to what the user can see or understand at that moment.
+
+4. **Breathing hierarchy**
+   The interface must remain readable, calm and intentional. A mission-control aesthetic must never become visual noise.
+
+A dashboard card belongs on the screen only if it helps the user understand, observe, predict or explore something meaningful.
+
+Possible card families may include:
 
 * local sky now;
 * tonight’s highlights;
 * observation timeline;
-* featured phenomenon;
-* Moon phase and visibility;
+* Moon visibility;
 * planet visibility;
-* upcoming events;
-* deep-sky image;
-* space or astronomy briefing;
+* featured phenomenon;
+* upcoming event;
+* contextual sky briefing generated from local calculations and curated content;
 * “why it matters” explanation.
 
-The exact layout should evolve through prototypes.
+These are possible families, not a fixed backlog.
 
-The philosophy, however, is fixed:
-
-> **The platform should open with the sky in motion, not with a static explanation.**
+The dashboard must remain adaptive.
 
 ---
 
-## 5. Open Exploration, Supported by Mission Briefings
+## 7. Open Exploration, Supported by Mission Briefings
 
 AstroPhenomena Explorer should not force the user into a linear course.
 
@@ -140,7 +211,7 @@ The platform should guide attention through mission-style briefings:
 * what is worth understanding;
 * what concept is hidden behind the phenomenon.
 
-The preferred experience is therefore:
+The preferred experience is:
 
 ```text
 Live briefing
@@ -164,7 +235,7 @@ It should feel like a space mission briefing connected to an open world of astro
 
 ---
 
-## 6. Objects and Phenomena First
+## 8. Objects and Phenomena First
 
 AstroPhenomena Explorer should begin with what the user can see.
 
@@ -206,7 +277,7 @@ The platform should move from visible reality to scientific meaning.
 
 ---
 
-## 7. Everyday Sky Intelligence
+## 9. Everyday Sky Intelligence
 
 AstroPhenomena Explorer should not focus only on rare or spectacular events.
 
@@ -233,7 +304,7 @@ AstroPhenomena Explorer should make the familiar become fascinating.
 
 ---
 
-## 8. Wonder and Scientific Precision
+## 10. Wonder and Scientific Precision
 
 AstroPhenomena Explorer must balance wonder and rigor.
 
@@ -251,7 +322,7 @@ The goal is:
 
 > **Make astronomy feel magical without making it vague. Make science rigorous without making it cold.**
 
-Every explanation must be correct.
+Every explanation must aim to be correct, traceable and scientifically grounded.
 
 Every visual element must serve understanding.
 
@@ -261,7 +332,7 @@ The beauty of the platform should come from the beauty of real astronomical phen
 
 ---
 
-## 9. Visual Intuition Before Formalism
+## 11. Visual Intuition Before Formalism
 
 AstroPhenomena Explorer should explain through visual intuition first.
 
@@ -311,9 +382,15 @@ It should say:
 
 > “Look at what happens. Now let’s understand why. Then, if useful, here is how it can be calculated.”
 
+Explanation and visualization are not a separate phase.
+
+They are a transversal requirement of every module, at every stage of development.
+
+A module that calculates without explaining is not yet complete.
+
 ---
 
-## 10. Design as a Scientific Instrument
+## 12. Design as a Scientific Instrument
 
 Beauty is not a decorative layer in AstroPhenomena Explorer.
 
@@ -351,7 +428,7 @@ The design must support the science.
 
 ---
 
-## 11. The Mission Briefing Voice
+## 13. The Mission Briefing Voice
 
 AstroPhenomena Explorer should speak like a scientific mission briefing.
 
@@ -372,19 +449,15 @@ It should first tell the user what matters now.
 
 Then it should offer deeper explanations when curiosity appears.
 
-Example tone:
+The voice should guide attention, not overwhelm it.
 
-> **Moon briefing — Tonight, the Moon appears as a waxing crescent. Its shape is not changing physically: your viewing geometry is. You are seeing only part of the Moon’s sunlit side from Earth.**
+It should make the user feel oriented, curious and capable of understanding the sky.
 
-Or:
-
-> **Tonight’s highlight — Jupiter is well placed after sunset. Its altitude makes it one of the easiest bright targets to identify. This is a good entry point to understand visibility, altitude and planetary motion.**
-
-The platform should guide the user from immediate curiosity to deeper understanding.
+Concrete voice guidelines, copy examples and reusable templates belong in the Prompt Library or Style Guide, not in this philosophy document.
 
 ---
 
-## 12. Self-Sufficient Intelligence Before Artificial Intelligence
+## 14. Self-Sufficient Intelligence Before Artificial Intelligence
 
 AstroPhenomena Explorer should not depend on paid AI APIs to feel intelligent.
 
@@ -416,7 +489,40 @@ This makes the project more robust, more transparent, more affordable and more v
 
 ---
 
-## 13. Digital-First, Hardware Later
+## 15. Scientific Traceability Principle
+
+AstroPhenomena Explorer must be scientifically ambitious without becoming scientifically vague.
+
+Every explanation, calculation or visualization should be traceable to at least one of the following:
+
+* a scientific concept studied in the DU ECU or another reliable educational source;
+* a documented astronomical formula or model;
+* an open scientific dataset or catalogue;
+* a transparent calculation performed by the platform;
+* a curated reference or course note;
+* a clearly stated approximation.
+
+The platform should distinguish between:
+
+* verified calculation;
+* simplified explanation;
+* visual approximation;
+* speculative future extension;
+* placeholder prototype content.
+
+This principle protects the project from becoming a beautiful but unreliable interface.
+
+It also strengthens its value as a scientific and engineering portfolio.
+
+The guiding rule is:
+
+> **If the platform explains something, it should be possible to know where the explanation comes from.**
+
+The detailed mechanisms for scientific validation, testing and source management belong in the Architecture Document, Scientific Map and Research Library.
+
+---
+
+## 16. Digital-First, Hardware Later
 
 AstroPhenomena Explorer is digital-first.
 
@@ -452,9 +558,11 @@ Hardware is not a starting requirement.
 
 It is a future embodiment of the project.
 
+No early software decision should be over-engineered for hardware before the digital platform has a stable scientific core.
+
 ---
 
-## 14. Personal Origin and Signature
+## 17. Personal Origin and Signature
 
 AstroPhenomena Explorer is personal, but it should not be self-centered.
 
@@ -486,7 +594,7 @@ It should feel designed, inhabited and scientifically intentional.
 
 ---
 
-## 15. Public, Open-Source, Personally Directed
+## 18. Public, Open-Source, Personally Directed
 
 AstroPhenomena Explorer is open-source by default.
 
@@ -522,7 +630,7 @@ The principle is:
 
 ---
 
-## 16. English-First, Bilingual-Ready Later
+## 19. English-First, Bilingual-Ready Later
 
 AstroPhenomena Explorer should be English-first.
 
@@ -541,13 +649,21 @@ French may become an important second language later because the project is also
 
 The architecture of content should eventually allow explanations, templates and interface text to exist in multiple languages.
 
+This has visual consequences.
+
+The interface should be designed with flexible layouts that can tolerate longer translated scientific terms without breaking the experience.
+
+Cards, labels and explanatory blocks should avoid fragile fixed-width text assumptions.
+
 The initial principle is:
 
 > **English-first, bilingual-ready later.**
 
+The detailed internationalization strategy belongs in the Architecture Document and Design System.
+
 ---
 
-## 17. What AstroPhenomena Explorer Refuses to Be
+## 20. What AstroPhenomena Explorer Refuses to Be
 
 AstroPhenomena Explorer refuses to become:
 
@@ -583,7 +699,7 @@ It should let users explore, understand and analyze.
 
 ---
 
-## 18. Relationship to Existing Tools
+## 21. Relationship to Existing Tools
 
 AstroPhenomena Explorer does not aim to replace existing astronomy tools.
 
@@ -612,7 +728,7 @@ The difference should be felt immediately:
 
 ---
 
-## 19. Scope and Boundaries
+## 22. Scope and Boundaries
 
 AstroPhenomena Explorer may eventually cover several domains:
 
@@ -640,88 +756,29 @@ If not, it should stay outside.
 
 This keeps AstroPhenomena Explorer from becoming a generic space content website.
 
----
-
-## 20. Long-Term Evolution
-
-AstroPhenomena Explorer should evolve in layers.
-
-A possible long-term trajectory is:
-
-### Phase 1 — Understand the Sky
-
-Build the foundations:
-
-* local sky;
-* coordinates;
-* altitude and azimuth;
-* right ascension and declination;
-* visibility;
-* time;
-* culmination;
-* rise and set.
-
-### Phase 2 — Observe and Plan
-
-Help users understand what is observable:
-
-* tonight’s sky;
-* observation timeline;
-* best windows;
-* Moon impact;
-* visibility conditions;
-* object recommendations.
-
-### Phase 3 — Predict Phenomena
-
-Detect and explain astronomical events:
-
-* phases;
-* conjunctions;
-* oppositions;
-* eclipses;
-* transits;
-* meteor showers;
-* notable alignments.
-
-### Phase 4 — Explain and Visualize
-
-Create visual learning modules:
-
-* animated phenomena;
-* orbital geometry;
-* coordinate systems;
-* atmospheric effects;
-* astrophysical processes;
-* everyday sky questions.
-
-### Phase 5 — Analyze Real Data
-
-Use scientific datasets:
-
-* catalogues;
-* Gaia data;
-* meteor reports;
-* images;
-* observation records;
-* comparisons between prediction and observation.
-
-### Phase 6 — Connect to Hardware
-
-Develop a homemade mini-observatory or physical observing node:
-
-* capture local sky data;
-* connect hardware to the platform;
-* compare real observations to predicted phenomena;
-* create a physical anchor for the digital system.
-
-This evolution should remain progressive.
-
-The platform must grow without losing coherence.
+Every major scope expansion should be recorded in the decision log.
 
 ---
 
-## 21. Central Promise
+## 23. Long-Term Evolution
+
+AstroPhenomena Explorer should evolve in progressive layers, each reusing the foundations of the previous one.
+
+The general trajectory moves from understanding the sky, to observing it, to predicting phenomena, to simulating them, and eventually to analyzing real scientific data.
+
+A future hardware layer may eventually connect the digital platform to physical observation.
+
+The detailed phasing, milestones and sequencing are defined in the Roadmap document.
+
+They must not be duplicated here, because the philosophy should remain stable while the roadmap may evolve with the project.
+
+One principle governs all phases:
+
+> **Each layer must be understandable, testable and connected to a real scientific concept before the next layer begins.**
+
+---
+
+## 24. Central Promise
 
 The central promise of AstroPhenomena Explorer is:
 
@@ -743,13 +800,13 @@ AstroPhenomena Explorer should make users feel:
 
 ---
 
-## 22. Philosophy in One Sentence
+## 25. Philosophy in One Sentence
 
 AstroPhenomena Explorer is an immersive, open-source astronomy platform that turns the live sky into a beautiful, contextual and scientifically rigorous experience of observation, explanation, prediction and exploration.
 
 ---
 
-## 23. Short Positioning Statements
+## 26. Short Positioning Statements
 
 ### Portfolio version
 
@@ -771,9 +828,13 @@ A personal digital observatory for turning the sky into something alive, intelli
 
 A self-sufficient astronomical intelligence platform based on transparent calculations, open data, deterministic rules and interactive visualizations.
 
+### Mission briefing version
+
+Your local sky, translated into a live scientific mission briefing.
+
 ---
 
-## 24. Closing Statement
+## 27. Closing Statement
 
 AstroPhenomena Explorer should not be built as a finished product from the beginning.
 
@@ -796,4 +857,3 @@ It should feel explorable.
 It should feel like something one can learn to read.
 
 AstroPhenomena Explorer is the attempt to build that interface.
-

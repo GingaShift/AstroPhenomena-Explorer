@@ -1078,4 +1078,29 @@ If the image is not included, keep it outside the Master Brief and move it later
 
 ```
 ```
+### 11.5 The Topocentric Visual Constraint
+
+To prevent AstroPhenomena Explorer from mimicking generic space simulators, primary visual representations should be anchored in the user’s local sky whenever relevant.
+
+By default, interface visuals should begin from the point of view of an observer on Earth.
+
+This means prioritizing:
+
+* local horizon;
+* altitude and azimuth;
+* visible sky region;
+* observer location;
+* current time;
+* object visibility;
+* what can actually be seen from the ground.
+
+Heliocentric, geocentric, orbital or abstract views are allowed when they clarify a scientific concept.
+
+However, the first visual anchor should usually answer:
+
+> **What does this mean for my sky, here and now?**
+
+This supports the core promise:
+
+> **“This is my sky, now.”**
 

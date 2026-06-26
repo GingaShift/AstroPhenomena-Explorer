@@ -61,3 +61,12 @@ Tier 4a can be developed earlier. Tier 4b belongs to advanced or future phases.
 All future Feature Briefs must follow the template defined in the Master Brief.
 
 No coding agent should implement a serious feature without a Feature Brief.
+
+Astropy-first
+dataclasses for core models
+type annotations required in stable code
+object protocol with get_equatorial_position(time)
+UI-agnostic visualization layer
+no top-level explanations package
+phenomena namespace reserved
+Prototype 001 before stable implementation
